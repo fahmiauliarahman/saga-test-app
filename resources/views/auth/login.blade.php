@@ -11,7 +11,8 @@
                 <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="{{__('Email')}}" name="email" value="{{ old('email') }}">
+                        <input type="email" class="form-control" placeholder="{{__('Email')}}" name="email"
+                               value="{{ old('email') }}">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -43,10 +44,7 @@
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> {{__('Sign in using Facebook')}}
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
+                    <a href="{{ route('google-login') }}" class="btn btn-block btn-danger">
                         <i class="fab fa-google-plus mr-2"></i> {{__('Sign in using Google')}}
                     </a>
                 </div>

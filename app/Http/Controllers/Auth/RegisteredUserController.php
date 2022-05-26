@@ -46,9 +46,10 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'avatar' => 'https://ui-avatars.com/api/?name=' . $request->name,
         ]);
         $role = Role::findByName('author');
-        ModelHasRole::create([
+        ModelHasRole::updateOrCreate(['model_uuid' => $user->id], [
             'role_id' => $role->id,
             'model_uuid' => $user->id,
             'model_type' => User::class,

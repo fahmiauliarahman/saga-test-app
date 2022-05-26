@@ -23,10 +23,11 @@ class UserSeeder extends Seeder
             'name' => "Admin",
             'email' => "admin@yopmail.com",
             'password' => Hash::make('password'),
+            'avatar' => 'https://ui-avatars.com/api/?name=Admin',
         ]);
 
         $role = Role::findByName('admin');
-        ModelHasRole::create([
+        ModelHasRole::updateOrCreate(['model_uuid' => $user->id], [
             'role_id' => $role->id,
             'model_uuid' => $user->id,
             'model_type' => User::class,
@@ -35,13 +36,15 @@ class UserSeeder extends Seeder
 
         $faker = Factory::create('id_ID');
         for ($i = 0; $i < 10; $i++) {
+            $name = $faker->name;
             $user = User::create([
-                'name' => $faker->name,
+                'name' => $name,
                 'email' => $faker->unique()->safeEmail,
                 'password' => Hash::make('password'),
+                'avatar' => 'https://ui-avatars.com/api/?name=' . $name,
             ]);
             $role = Role::findByName('author');
-            ModelHasRole::create([
+            ModelHasRole::updateOrCreate(['model_uuid' => $user->id], [
                 'role_id' => $role->id,
                 'model_uuid' => $user->id,
                 'model_type' => User::class,
