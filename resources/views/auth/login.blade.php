@@ -2,7 +2,7 @@
 @section('content')
     <div class="login-box">
         <div class="login-logo">
-            <a href="/themes/index2.html"><b>Saga</b> Sosmed</a>
+            <a href="{{ url('/') }}"><b>Saga</b> Sosmed</a>
         </div>
         <div class="card">
             <div class="card-body login-card-body">

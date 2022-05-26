@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use Spatie\Permission\PermissionRegistrar;
 
 class CreatePermissionTables extends Migration
@@ -21,7 +21,7 @@ class CreatePermissionTables extends Migration
         if (empty($tableNames)) {
             throw new \Exception('Error: config/permission.php not loaded. Run [php artisan config:clear] and try again.');
         }
-        if ($teams && empty($columnNames['team_foreign_key'] ?? null)) {
+        if ($teams && empty($columnNames['team_foreign_key'] ?? NULL)) {
             throw new \Exception('Error: team_foreign_key on config/permission.php not loaded. Run [php artisan config:clear] and try again.');
         }
 
@@ -120,7 +120,7 @@ class CreatePermissionTables extends Migration
         });
 
         app('cache')
-            ->store(config('permission.cache.store') != 'default' ? config('permission.cache.store') : null)
+            ->store(config('permission.cache.store') != 'default' ? config('permission.cache.store') : NULL)
             ->forget(config('permission.cache.key'));
     }
 

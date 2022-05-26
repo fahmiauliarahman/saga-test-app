@@ -20,11 +20,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->uuid('role_id');
             $table->integer('created_at')->useCurrent();
             $table->integer('updated_at')->useCurrent();
-
-            $table->foreign('role_id')->references('id')->on('roles');
         });
     }
 
