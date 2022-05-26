@@ -4,11 +4,22 @@
         <div class="login-logo">
             <a href="{{ url('/') }}"><b>Saga</b> Sosmed</a>
         </div>
+
+        @if($errors->any())
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">{{__('Sign in to start your session')}}</p>
 
-                <form action="{{ route('login') }}" method="post">
+                <form action="{{ route('login') }}" method="post" id="quickForm">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="{{__('Email')}}" name="email"
@@ -55,4 +66,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script src="/js/auth/login.js"></script>
 @endsection

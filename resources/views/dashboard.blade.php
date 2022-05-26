@@ -1,1 +1,1 @@
-<p>Dashboard</p>
+@extends('layouts.app')
