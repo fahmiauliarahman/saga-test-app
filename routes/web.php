@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
-
 Route::get('auth/google/login', [AuthenticatedSessionController::class, 'google'])->name('google-login');
 Route::get('auth/google/callback', [AuthenticatedSessionController::class, 'google_callback'])->name('google-callback');
 
@@ -29,4 +24,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('{category?}', [HomeController::class, 'homepage'])->name('homepage');
+Route::get('{category}/{article?}', [HomeController::class, 'detail_article'])->name('article.detail');
 
