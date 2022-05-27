@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/themes/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="/themes/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <link rel="stylesheet" href="/themes/dist/css/adminlte.min.css">
-    <script src="/themes/plugins/sweetalert2/sweetalert.min.js"></script>
     @yield('css')
+    <script src="/themes/plugins/sweetalert2/sweetalert.min.js"></script>
 </head>
 <body class="hold-transition login-page">
 @yield('content')

@@ -7,7 +7,6 @@ $(function () {
             },
             password: {
                 required: true,
-                minlength: 8,
             },
         },
         messages: {
@@ -17,7 +16,6 @@ $(function () {
             },
             password: {
                 required: "Please provide a password",
-                minlength: "Your password must be at least 8 characters long",
             },
         },
         errorElement: 'span',

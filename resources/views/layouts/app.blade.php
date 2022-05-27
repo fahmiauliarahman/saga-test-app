@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/themes/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="/themes/dist/css/adminlte.min.css">
     @yield('css')
+    <script src="/themes/plugins/sweetalert2/sweetalert.min.js"></script>
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -59,5 +61,8 @@
     const token = $('meta[name="csrf-token"]').attr('content');
 </script>
 <script src="/js/common.js"></script>
+@yield('js')
+@include('sweet::alert')
+
 </body>
 </html>

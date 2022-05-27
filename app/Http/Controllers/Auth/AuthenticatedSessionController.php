@@ -77,7 +77,7 @@ class AuthenticatedSessionController extends Controller
 
         $user = User::firstOrCreate(['email' => $data['email']], $data);
         $role = Role::findByName('author');
-        ModelHasRole::updateOrCreate(['model_uuid' => $user->id], [
+        ModelHasRole::firstOrCreate(['model_uuid' => $user->id], [
             'role_id' => $role->id,
             'model_uuid' => $user->id,
             'model_type' => User::class,

@@ -5,15 +5,15 @@
             <a href="{{ url('/') }}"><b>Saga</b> Sosmed</a>
         </div>
 
-        @if($errors->any())
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        {{--        @if($errors->any())--}}
+        {{--            <div class="alert alert-danger alert-dismissible fade show" role="alert">--}}
+        {{--                <ul>--}}
+        {{--                    @foreach($errors->all() as $error)--}}
+        {{--                        <li>{{ $error }}</li>--}}
+        {{--                    @endforeach--}}
+        {{--                </ul>--}}
+        {{--            </div>--}}
+        {{--        @endif--}}
 
         <div class="card">
             <div class="card-body login-card-body">
