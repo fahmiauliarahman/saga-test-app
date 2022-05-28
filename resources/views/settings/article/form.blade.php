@@ -1,7 +1,7 @@
-<div class="modal fade" id="modal-category">
+<div class="modal fade" id="modal-article">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form action="" method="POST" id="form-category">
+            <form action="" method="POST" id="form-article">
                 <div class="modal-header">
                     <h4 class="modal-title"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -12,9 +12,22 @@
                     @csrf
                     @method('POST')
                     <div class="form-group">
-                        <label for="name">Category Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Category Name">
+                        <label for="title">Article Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Article Title">
                     </div>
+                    <div class="form-group">
+                        <label for="title">Article Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Article Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Article Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Article Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Article Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Article Title">
+                    </div>
+
 
                 </div>
                 <div class="modal-footer justify-content-between">

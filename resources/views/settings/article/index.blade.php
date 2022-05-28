@@ -11,11 +11,11 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            <h3 class="card-title">Showing all categories</h3>
+                            <h3 class="card-title">Showing all of your articles</h3>
 
                         </div>
                         <div class="col text-right">
-                            <a href="#" class="btn btn-sm btn-primary add-category">Add New</a>
+                            <a href="#" class="btn btn-sm btn-primary add-article">Add New</a>
                         </div>
                     </div>
                 </div>
@@ -27,23 +27,33 @@
                             <th>#</th>
                             <th>Name</th>
                             <th>Slug</th>
+                            <th>Content</th>
+                            <th>Banner</th>
+                            <th>Category Name</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($categories as $category)
+                        @forelse($articles as $article)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $category->name }}</td>
-                                <td>{{ $category->slug }}</td>
+                                <td>{{ $article->title }}</td>
+                                <td>{{ $article->slug }}</td>
+                                <td>{{ $article->content }}</td>
+                                <td><img src="{{ $article->banner }}" alt="banner" style="max-width: 100px"></td>
+                                <td>{{ $article->category->name }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-success">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="#" class="edit-article btn btn-success" data-id="{{$article->id}}}"
+                                       data-title="{{$article->title}}" data-slug="{{$article->slug}}"
+                                       data-content="{{$article->content}}" data-banner="{{$article->banner}}"
+                                       data-category="{{$article->category_id}}">Edit</a>
+                                    <a href="#" class="delete-article btn btn-danger" data-id="{{$article->id}}}"
+                                       data-title="{{$article->title}}">Delete</a>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4" class="text-center">No Data Found</td>
+                                <td colspan="7" class="text-center">No Data Found</td>
                             </tr>
                         @endforelse
                         </tbody>
@@ -52,6 +62,9 @@
                             <th>#</th>
                             <th>Name</th>
                             <th>Slug</th>
+                            <th>Content</th>
+                            <th>Banner</th>
+                            <th>Category Name</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
@@ -60,7 +73,7 @@
             </div>
         </div>
     </div>
-    @include('settings.category.form')
+    @include('settings.article.form')
 @endsection
 
 @section('js')
@@ -77,5 +90,5 @@
     <script src="/themes/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="/themes/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script src="/js/datatable_init.js"></script>
-    <script src="/js/settings/category.js"></script>
+    <script src="/js/settings/article.js"></script>
 @endsection
