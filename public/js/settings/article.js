@@ -7,6 +7,8 @@ $(document).ready(function () {
         const formid = "#form-article";
         const modal = $("#modal-article");
         resetForm(formid);
+        $(".sample-img").hide();
+        $("#article_content").text("");
         $(`${formid} input[name=_method]`).val("POST");
         $(formid).attr("action", `${base_url}/settings/article`);
         $(`#modal-article .modal-title`).text('Add Article');
@@ -20,16 +22,20 @@ $(document).ready(function () {
         const modal = $("#modal-article");
         const id = me.data("id");
         const name = me.data("title");
-        const slug = me.data("slug");
         const content = me.data("content");
         const banner = me.data("banner");
         const category = me.data("category");
 
         resetForm(formid);
+        $(".sample-img").show();
+
         $(`${formid} input[name=_method]`).val("PUT");
         $(formid).attr("action", `${base_url}/settings/article/${id}`);
         $(`#modal-article .modal-title`).text(`Edit Article: ${name}`);
         $("#title").val(name);
+        $("#article_content").text(content);
+        $("#category_id").val(category);
+        $(".sample-img").attr('src', banner);
         modal.modal("show");
     });
 

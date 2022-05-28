@@ -39,15 +39,20 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->slug }}</td>
-                                <td>{{ $article->content }}</td>
-                                <td><img src="{{ $article->banner }}" alt="banner" style="max-width: 100px"></td>
+                                <td>
+                                    {{ substr(strip_tags($article->content), 0, 100) }}
+                                    {{ strlen(strip_tags($article->content)) > 100 ? "..." : "" }}
+                                </td>
+                                <td><img src="/img/thumbs/{{ $article->banner }}" alt="banner" style="max-width: 100px">
+                                </td>
                                 <td>{{ $article->category->name }}</td>
                                 <td>
-                                    <a href="#" class="edit-article btn btn-success" data-id="{{$article->id}}}"
-                                       data-title="{{$article->title}}" data-slug="{{$article->slug}}"
-                                       data-content="{{$article->content}}" data-banner="{{$article->banner}}"
+                                    <a href="#" class="edit-article btn btn-success" data-id="{{$article->id}}"
+                                       data-title="{{$article->title}}"
+                                       data-content="{{$article->content}}"
+                                       data-banner="/img/thumbs/{{$article->banner}}"
                                        data-category="{{$article->category_id}}">Edit</a>
-                                    <a href="#" class="delete-article btn btn-danger" data-id="{{$article->id}}}"
+                                    <a href="#" class="delete-article btn btn-danger" data-id="{{$article->id}}"
                                        data-title="{{$article->title}}">Delete</a>
                                 </td>
                             </tr>

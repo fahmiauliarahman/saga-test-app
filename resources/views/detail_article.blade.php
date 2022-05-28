@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="text-center">
-        <img src="{{$article->banner}}" alt="Banner Image" style="max-height: 400px; background-size: cover">
+        <img src="/img/normal/{{$article->banner}}" alt="Banner Image"
+             style="max-height: 400px; background-size: cover">
     </div>
 
     <div class="container my-3">

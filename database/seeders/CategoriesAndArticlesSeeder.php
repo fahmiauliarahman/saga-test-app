@@ -46,7 +46,7 @@ class CategoriesAndArticlesSeeder extends Seeder
                     'title' => $article_title,
                     'slug' => $slug,
                     'content' => $faker->paragraph(3),
-                    'banner' => $faker->imageUrl(640, 480),
+                    'banner' => "default.png",
                     'user_id' => $user_id[array_rand($user_id)],
                 ]);
             }
