@@ -51,7 +51,8 @@
                              style="max-width: 50px" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="" class="d-block text-decoration-none">{{ auth()->user()->name }}</a>
+                        <a href="{{ route('profile')  }}"
+                           class="d-block text-decoration-none">{{ auth()->user()->name }}</a>
                     </div>
                 </div>
             @endif

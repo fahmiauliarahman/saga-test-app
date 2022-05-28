@@ -37,8 +37,8 @@ class Util
             $slug = strtolower($text);
             $slug = preg_replace('/[^a-z0-9-]/', $divider, $slug);
             $slug = preg_replace('/-+/', $divider, $slug);
+            $slug = rtrim($slug, $divider . "0");
             $slug = rtrim($slug, $divider);
-            $slug = $slug . $divider . $increment;
             $slug_count = $model::where('slug', $slug)->count();
             if ($slug_count > 0) {
                 return self::slugify($text, $type, $increment + 1, $divider);
