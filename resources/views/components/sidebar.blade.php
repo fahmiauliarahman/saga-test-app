@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ $judul === 'My Profile' ? 'active' : '' }}">
+                    <a href="{{ route('profile') }}" class="nav-link {{ $judul === 'My Profile' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             My Profile

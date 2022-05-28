@@ -12,5 +12,4 @@ class ModelHasRole extends Model
     protected $table = 'model_has_roles';
     protected $fillable = ['role_id', 'model_uuid', 'model_type'];
     public $timestamps = false;
-
 }
