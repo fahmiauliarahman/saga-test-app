@@ -86,7 +86,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|string|max:255|unique:categories,name,' . $id,
+        ]);
+        Category::find($id)->update([
+            'name' => $request->name,
+            'slug' => Util::slugify($request->name, 'category')['data']['slug'],
+        ]);
+
+        return redirect()->back()->with('success', 'Category updated successfully.');
     }
 
     /**
@@ -98,6 +106,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::destroy($id);
     }
 }

@@ -25,7 +25,7 @@ $(document).ready(function () {
         $(`${formid} input[name=_method]`).val("PUT");
         $(formid).attr("action", `${base_url}/settings/category/${id}`);
         $(`#modal-category .modal-title`).text(`Edit Category: ${name}`);
-        $("#name").val(name);
+        $("#category_name").val(name);
         modal.modal("show");
     });
 

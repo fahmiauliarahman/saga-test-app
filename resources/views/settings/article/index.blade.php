@@ -37,10 +37,8 @@
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
                                 <td>
-                                    <a href="#" class="edit-category btn btn-success" data-id="{{ $category->id }}"
-                                       data-name="{{ $category->name }}">Edit</a>
-                                    <a href="#" class="delete-category btn btn-danger" data-id="{{ $category->id }}"
-                                       data-name="{{ $category->name }}">Delete</a>
+                                    <a href="#" class="btn btn-success">Edit</a>
+                                    <a href="#" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @empty
