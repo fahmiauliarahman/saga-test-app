@@ -54,7 +54,8 @@
 
                 @hasrole('admin')
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ $judul === 'Users Management' ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}"
+                       class="nav-link {{ $judul === 'Users Management' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users-cog"></i>
                         <p>
                             Users Management

@@ -51,7 +51,6 @@ class User extends Authenticatable
     public function getRoleNameAttribute()
     {
         return implode(", ", $this->roles->pluck('name')->toArray());
-
     }
 
     protected $appends = ['role_name'];

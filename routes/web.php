@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('category', CategoryController::class)->except('create', 'edit', 'show');
         Route::resource('article', ArticleController::class)->except('create', 'edit', 'show');
         Route::group(['middleware' => ['role:admin']], function () {
-            Route::resource('user', UsersController::class);
+            Route::resource('user', UsersController::class)->except('create', 'edit', 'show');
         });
     });
 
