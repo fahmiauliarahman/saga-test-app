@@ -75,7 +75,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ $judul === 'My Article' ? 'active' : '' }}">
+                    <a href="{{ route('article.index') }}"
+                       class="nav-link {{ $judul === 'My Article' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-book-open"></i>
                         <p>
                             My Article
