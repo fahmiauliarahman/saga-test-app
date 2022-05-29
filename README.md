@@ -1,4 +1,4 @@
-### Installing app
+## Installing app
 
 1. Clone the repository
 2. Open project folder
@@ -8,77 +8,102 @@
 6. run `php artisan migrate:fresh --seed`
 7. run `php artisan serve`
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Written Test
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+1. Im well as always, thank you.
+2. Currently, I am exploring go-language, javascript frameworks, and Mobile development using react native in the
+   following year.
+3. Here is my preferred environment.
+    - OS: Ubuntu 20 / MacOS Monterey
+    - IDE: Visual Studio Code (In General) / PHPStorm (for PHP) / Webstorm (for Javascript)
+    - Browsers: Chrome / Firefox
+    - Tools: Git / Docker / Docker Compose / Postman / Jira / Discord / Trello
+4. MVC Concept is stand for Model-View-Controller. It is a design pattern that separate and application to three parts.
+   Model is data, View is UI and Controller is business logic.
+5. The Result is `oidutS latigiD agaS`. The alternative approach is to use built-in function of PHP
+    ```php
+    strrev("Saga Digital studio")
+    ```
 
-## About Laravel
+6. The value is
+    ```php
+    $array = ['coffee','latte'];
+   ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and
-creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in
-many web projects, such as:
+7. The differences beetween public, private and protected in class definition are
+    - public: can be accessed from anywhere
+    - private: can be accessed only from within the class
+    - protected: can be accessed only from within the class and its subclasses
+8. To prevent SQL Injection, we purify the input data. If you are on PHP, you can use built-in function for example
+    - `htmlspecialchars()`
+    - `strip_tags()`
+9. To prevent CSRF attack, we can use token on session, and when you want to submit the form, you have to pass the token
+   with hidden value for example. or if you are using PHP framework like laravel, it is easier. just add
+   directive `@csrf` in the `<form>` tag and done.
+10. You cannot use `$_POST['id']` in mysql query because its a php variable.
+11. Mysql:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache)
-  storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    ```mysql
+    SELECT COUNT(*)
+    FROM comments
+    WHERE user_id = 1234
+    ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+12. PHP:
 
-## Learning Laravel
+    ```php
+     function fizzBuzz(int $num)
+    {
+        for ($i = 1; $i <= $num; $i++) {
+            if ($i % 3 === 0 && $i % 5 === 0) {
+                echo "FizzBuzz";
+            } elseif ($i % 3 === 0) {
+                echo "Fizz";
+            } elseif ($i % 5 === 0) {
+                echo "Buzz";
+            } else {
+                echo $i;
+            }
+    
+            if ($i < $num) {
+                echo ", ";
+            }
+        }
+    
+        echo "\n";
+    }
+    
+    echo fizzBuzz(100);
+    
+    
+    // to run, type in terminal: php soal4.php
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all
-modern web application frameworks, making it a breeze to get started with the framework.
+13. Git:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video
-tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging
-into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in
-becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in
-the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by
-the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell
-via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```
+    init: start a new repository
+    add: add file to staging area
+    commit: add new file to version history
+    push: push to remote repository
+    
+    config: set up git configuration
+    pull: pull from remote repository
+    clone: clone a repository / obtain a repository from url parameter
+    diff: show difference between two files
+    reset: reset file to previous version before commit
+    status: show status of files whether is modified, deleted, not added to staging area, etc.
+    log: show commit history
+    tag: create a tag to specified commit id
+    branch: show local branch
+    branch [name]: create a new branch with name of parameter
+    branch -d [name]: delete a branch
+    checkout [name]: switch to a branch with name of parameter
+    merge: merge two branches
+    remote add origin: connect your local project to remote repository
+    stash: save your modified changes
+    stash pop: restore your changes from stash
+    stash list: show all stash
+    stash drop: remove a stash
+    
+    ```
