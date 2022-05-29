@@ -6,7 +6,8 @@
 4. run `cp .env.example .env`
 5. setup your environment
 6. run `php artisan migrate:fresh --seed`
-7. run `php artisan serve`
+7. run `php artisan storage:link`
+8. run `php artisan serve`
 
 ## Written Test
 
