@@ -1,6 +1,6 @@
 ## Installing app
 
-1. Clone the repository
+1. Clone the repository `git clone https://github.com/fahmiauliarahman/saga-test-app.git --depth=1`
 2. Open project folder
 3. run `composer install`
 4. run `cp .env.example .env`
