@@ -22,7 +22,7 @@
    Model is data, View is UI and Controller is business logic.
 5. The Result is `oidutS latigiD agaS`. The alternative approach is to use built-in function of PHP
     ```php
-    strrev("Saga Digital studio")
+    strrev("Saga Digital Studio");
     ```
 
 6. The value is
