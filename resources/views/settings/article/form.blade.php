@@ -22,8 +22,8 @@
                     <div class="form-group">
                         <label for="banner">Banner (Select file to change)</label>
                         <br>
-                        <img class="sample-img" src="{{$article->banner}}" alt="banner" style="max-width: 100px;"
-                             class="my-2">
+                        <img class="sample-img" src="" alt="banner" style="max-width: 100px;"
+                            class="my-2">
                         <br>
                         <input type="file" class="form-control" id="banner" name="banner" placeholder="Banner">
                     </div>
@@ -31,8 +31,8 @@
                         <label for="category_id">Article Category</label>
                         <select name="category_id" id="category_id" class="form-control">
                             <option value="">Select Category</option>
-                            @foreach($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
