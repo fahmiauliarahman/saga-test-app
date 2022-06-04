@@ -9,6 +9,8 @@
 7. run `php artisan storage:link`
 8. run `php artisan serve`
 
+9. default admin: email: admin@yopmail.com | password: password
+
 ## Written Test
 
 1. Im well as always, thank you.
